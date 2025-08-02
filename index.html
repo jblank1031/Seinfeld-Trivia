@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yada Yada Trivia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header with custom Seinfeld‑style logo -->
+  <header class="logo">
+    <h1>Yada&nbsp;Yada&nbsp;Trivia</h1>
+  </header>
+
+  <!-- Start screen: player enters their name and starts the game -->
+  <main id="startScreen" class="screen">
+    <h2>Welcome to the ultimate Seinfeld quiz!</h2>
+    <p>Enter your name to begin:</p>
+    <input id="playerName" type="text" placeholder="Your name" />
+    <!-- Bagel button: styled to look like a bagel with a hole and text -->
+    <button id="startButton" class="bagelBtn">Giddy&nbsp;Up</button>
+    <section id="scoreboardPreview" class="scoreboard-section">
+      <h3>High Scores</h3>
+      <ol id="scoreboardList"></ol>
+    </section>
+  </main>
+
+  <!-- Question screen: displays round, question, timer and options -->
+  <section id="questionScreen" class="screen" hidden>
+    <div class="statusBar">
+      <span id="roundLabel"></span>
+      <span id="questionCounter"></span>
+      <span id="timer"></span>
+    </div>
+    <div id="questionContainer">
+      <p id="questionText"></p>
+      <div id="optionsContainer" class="options"></div>
+    </div>
+  </section>
+
+  <!-- Intermediate scoreboard screen shown after each round -->
+  <section id="intermediateScreen" class="screen" hidden>
+    <h2 id="roundResult"></h2>
+    <p id="roundMessage"></p>
+    <button id="nextRoundBtn" class="primaryBtn"></button>
+  </section>
+
+  <!-- Final scoreboard screen shown at the end of all rounds -->
+  <section id="finalScreen" class="screen" hidden>
+    <h2 id="finalMessage"></h2>
+    <h3>Your performance:</h3>
+    <p id="finalScore"></p>
+    <h3>Overall High Scores</h3>
+    <ol id="finalScoreboard"></ol>
+    <button id="restartBtn" class="primaryBtn">Play Again</button>
+  </section>
+
+  <!-- JavaScript to power the quiz -->
+  <script src="script.js"></script>
+</body>
+</html>
